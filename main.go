@@ -22,7 +22,6 @@ func main() {
 	}
 
 	route := gin.Default()
-
 	route.Use(cors.Default())
 
 	routes.Login(route)
@@ -30,6 +29,7 @@ func main() {
 	routes.AddMovie(route)
 	routes.GetMovies(route)
 	routes.GetMovieByYear(route)
+	routes.GetMovieByGenre(route)
 
 	route.Run(":8080")
 }

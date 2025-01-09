@@ -26,3 +26,7 @@ func GetMovies(r *gin.Engine){
 func GetMovieByYear(r *gin.Engine){
 	r.GET("api/movie", movie.GetMovieByYear)
 }
+
+func GetMovieByGenre(r *gin.Engine){
+	r.GET("api/movie", movie.GetMovieByYear)
+}
