@@ -30,6 +30,10 @@ func main() {
 	routes.GetMovies(route)
 	routes.GetMovieByYear(route)
 	routes.GetMovieByGenre(route)
+	routes.AddSeat(route)
+	routes.GetSeat(route)
+	routes.UpdateSeat(route)
+	routes.DeleteSeat(route)
 
 	route.Run(":8080")
 }

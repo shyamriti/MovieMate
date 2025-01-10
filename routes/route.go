@@ -3,6 +3,7 @@ package routes
 import (
 	"MovieMate/controllers"
 	"MovieMate/controllers/movie"
+	"MovieMate/controllers/seat"
 
 	"github.com/gin-gonic/gin"
 )
@@ -29,4 +30,20 @@ func GetMovieByYear(r *gin.Engine){
 
 func GetMovieByGenre(r *gin.Engine){
 	r.GET("api/movie", movie.GetMovieByYear)
+}
+
+func AddSeat(r *gin.Engine){
+	r.POST("api/seat/add", seat.AddSeat)
+}
+
+func GetSeat(r *gin.Engine){
+	r.GET("api/seat", seat.GetSeat)
+}
+
+func UpdateSeat(r *gin.Engine){
+	r.PUT("api/seat/update", seat.UpdateSeat)
+}
+
+func DeleteSeat(r *gin.Engine){
+	r.DELETE("api/seat/delete", seat.DeleteSeat)
 }
